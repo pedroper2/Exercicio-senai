@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+void cabecalho (){
+	printf("\n==== RESULTADO ===\n");
+	system("cls || clear");
+	fflush(stdin);
+}
+int main (){
+	int num;
+	
+	printf("escreva um numero ");
+	scanf("%i",&num);
+	
+	int i;
+	for(i=1;i<=10;i++){
+		printf(" %i x %i = %i \n",num,i,num*i);
+	}
+	
+	return 0;
+}
