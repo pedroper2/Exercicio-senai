@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include <stdlib.h>
+void cabecalho(){
+	system("cls || clear");
+	printf("===Resultado===");
+	fflush(stdin);
+}
+int main() {
+	//variavel
+	float media, primeiraNota,segundaNota;
+	char nome [200];
+	char conceito;
+	//coletando informação
+	printf("digite seu nome ");
+	scanf("%s",nome); 
+	//fgest(nome,200,stdin);} FORMAS DE PEGAR O ESPAÇO DA VARIEVEL (string)...
+	//gest(nome); FORMAS DE PEGAR O ESPAÇO DA VARIEVEL...(string)
+	
+	printf("digite a primeira nota.. ");
+	scanf("%f",&primeiraNota);
+	printf("digite a segunda nota.. ");
+	scanf("%f",&segundaNota);
+	//calculo
+	media= (primeiraNota+ segundaNota)/ 2;
+	//estruturas
+	if (media >= 9){
+		conceito= 'A';
+	} else if (media >=7.5){
+		conceito = 'B';
+	} else if (media >=6){
+		conceito = 'C';
+	} else if (media >= 4 ){
+		conceito= 'D';
+	} else {
+		conceito = 'E';
+	}
+	//exibindo dados
+	cabecalho ();
+	printf("\n primeira nota : %.2f",primeiraNota);
+	printf("\n segunda nota: %.2f",segundaNota);
+	printf(" \n A media é:  %.2f",media);
+	printf("\n conceito: ",conceito);
+	
+	if (conceito == 'A' || conceito == 'B' || conceito == 'C'){
+		printf ("aluno aprovado");
+	}
+	else{
+		printf(" aluno reprovado");
+	}
+	return 0;
+}
