@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+void cabecalho (){
+	system ("cls || clear");
+	printf("\n=== Senai===\n");
+	fflush(stdin);
+}
+int main (){
+	setlocale(LC_ALL,"");
+	// declarando variáveis
+	char login [200], senha [200];
+	char loginCadatrado[200]= "Pedro",senhaCadastrada [200]= "123";
+	
+	// coletando dados 
+	printf("LOGIN: ");
+	scanf("%s",login);
+	printf("SENHA: ");
+	scanf("%s",senha);
+	
+	//Exibindo dados
+	cabecalho ();
+	if (strcmp(login, loginCadatrado)== 0 && strcmp (senha, senhaCadastrada)==0){
+		printf ("\n Bem vindo");
+	} else {
+		printf("\n NEGADO");
+	}
+	
+	return 0;
+}
