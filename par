@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+void cabecalho (){
+	system ("cls || clear");
+	printf ("\n=== SENAI ===\n");
+	fflush (stdin);
+}
+int main(){
+	int num,somap=0,somai=0,i;
+	cabecalho ();
+	for (i=1;i<=5;i++){
+	printf ("escreva 5 valores ");
+	scanf("%i",&num);
+	if (num % 2 == 0){
+		somap ++;
+	} else{
+		somai ++;
+	}
+}
+	printf("Pares %i",somap);
+	printf("\nimpar %i",somai);
+return 0;
+	}
