@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+void cabecalho (){
+	system ("cls || clear");
+	printf("\n=== senai ===\n");
+	fflush(stdin);
+}
+float mediatotal(float n1 ,float n2 ){
+	float media= (n1 + n2)/2;
+	return media;
+}
+
+int main () {
+	setlocale (LC_ALL,"");
+	
+	float num1,num2,media;
+	
+	cabecalho ();
+	
+	printf("Escreva uma nota ");
+	scanf("%f",&num1);
+	
+	printf ("escreva outra nota ");
+	scanf("%f",&num2);
+	
+	media= mediatotal(num1,num2);
+	
+	printf(" A media é : %.2f ",media);
+	
+	return 0;
+}
