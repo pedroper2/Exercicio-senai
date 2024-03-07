@@ -1,0 +1,27 @@
+#include <stdio.h>
+// FUNÇÂO
+float AumentaValor (int valor){
+	float inflaciona,inflacionado;
+	if(valor <= 100){
+		inflaciona = (valor * 10) /100;
+		inflacionado = inflaciona + valor;
+	} else {
+		inflaciona = (valor * 20)/ 100;
+	    inflacionado = inflaciona + valor;
+	}
+	return inflacionado;
+}// FUNÇÂO
+int main (){
+	//VARIAVEL
+	float resultado;
+	int valor;
+	// COLETANDO DADOS
+	printf ("Escreva um valor ");
+	scanf ("%i",&valor);
+	// CHAMANDO A VARIAVEL
+	resultado = AumentaValor(valor);
+	// EXIBINDO O RESULTADO
+	printf ("\n o resultado : %2.f",resultado);
+	return 0;
+
+}
