@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+
+void verificarParOuImpar (int num){
+	if (num % 2 == 0){
+		printf("Impar");
+	} else {
+		printf ("par");
+	}
+}
+/* ou  char *verficarParOuImpar (int num){
+       char resposta [200];
+       if (num %2 == 0)
+       strcpy (resposta, "par".);
+       else
+       strcpy (respsota, "impar");
+       
+       return resposta;
+       
+       printf("o numero é  %s : ",resultado);
+*/
+int main (){
+	setlocale(LC_ALL, "");
+	int num;
+	
+	printf ("digite um numero ");
+	scanf("%i",&num);
+	
+	printf("verificando..");
+	verificarParOuImpar(num);
+	
+	return 0;
+}
