@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main (){
+	float nota,media,soma=0;
+	char resposta;
+	int contador= 0;
+	do {
+		printf("digite a nota : ");
+		scanf ("%f",&nota); 
+	    soma+= nota;
+		
+		printf("deseja continua ?? ");
+		scanf("%s",&resposta);
+		contador += +1;
+		fflush(stdin);
+		
+	}while (resposta == 's');
+	media= soma / (float)contador;
+	if (resposta == 'n'){
+		printf("\n A media : %f \n ",media);
+		printf (" O codigo foi executado %i ",contador);
+	}
+	return 0;
+	}
