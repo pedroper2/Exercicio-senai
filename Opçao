@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main(){
+	setlocale (LC_ALL,"");
+	float mediaSalario;
+	int maior =0 ,menor= 0,quantidadeM=0,salario,idade=0,opcao=0,soma=0;
+	char sexo;
+	char nome [200];
+	
+	printf ("SEU NOME ");
+	scanf ("%s",&nome);
+	printf ("M/F ? ");
+	scanf ("%s",&sexo);
+	printf("Digite sua idade :");
+	scanf ("%i",&idade);
+	printf("salario :");
+	scanf ("%i",&salario);
+	printf ("DESCRIÇÂO 1 {adiciona pesssoa} \n 2 {Exibir resultado e sair} \n ");
+	scanf ("%i",&opcao);
+	while (opcao == 1){
+	    printf ("SEU NOME ");
+	    scanf ("%s",&nome);
+	    printf ("M/F ? ");
+	    scanf ("%s",&sexo);
+		printf("Digite sua idade :");
+		scanf ("%i",&idade);
+		printf("salario :");
+		scanf ("%i",&salario);
+		printf ("DESCRIÇÂO 1 {adiciona pesssoa} \n 2 {Exibir resultado e sair} \n ");
+		scanf ("%i",&opcao);
+		if (sexo == 'f'){
+		quantidadeM++;
+		}
+		if (idade > 0){
+			idade = maior;
+		} else {
+			idade = menor;
+		}
+		soma+= salario;
+}
+	mediaSalario= soma / (float)quantidadeM;
+	printf ("%i",idade);
+	printf ("quantidade de mulheres %i",quantidadeM);
+	return 0;
+}
