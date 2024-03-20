@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main (){
+	char nome [200];
+	char sexo;
+	int maior,menor=999,quantidadeM=0,salario,soma=0,quantidadeSalario=0,opcao,idade;
+	float media;
+	do { 
+	printf ("Digite o nome ");
+	scanf ("%s",&nome);
+	printf ("sexo : F/M ");
+	scanf (" %c",&sexo);
+	printf("Idade: ");
+	scanf ("%i",&idade);
+	printf ("Salario");
+	scanf ("%i",&salario);
+	printf("1 [ADICIONA MAIS PESSOAS] \n 2 [EXIBIR RESULTADO]");
+	scanf ("%i",&opcao);
+	if (sexo == 'f'){
+		quantidadeM++;
+		soma+= salario;
+	if (idade > maior){
+		maior = idade;
+	}
+	if (idade < menor){
+		menor = idade;
+	}
+	if (salario >= 5000){
+		quantidadeSalario++;
+	}
+	}
+	}while (opcao == 1);
+	media = soma / quantidadeM;
+	printf ("A menor idade : %i \n",menor);
+	printf ("A maior idade : %i \n",maior);
+	printf("A media do salario %f \n",media);
+	printf ("Quantidade de mulheres que recebe 5k a cima : %i \n ",quantidadeSalario);
+	return 0;
+}
