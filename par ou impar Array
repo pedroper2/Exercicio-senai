@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main (){
+	int num[6],i,quantidadepar=0,quantidadeimpar=0;
+	setlocale (LC_ALL,"");
+	
+	for(i=0;i<6;i++){
+		printf ("Digite o %iº numero ",i+1);
+		scanf("%i",&num[i]);
+		if (num[i] % 2 == 0 ){
+			quantidadepar++;
+		}
+		if (num[i] %2 != 0){
+			quantidadeimpar++;
+		}
+	}
+	for (i=0;i<6;i++){
+		printf("\n%iº numero: %i ",i +1,num[i]);
+	}
+	printf ("\nNumeros impar: %i\n",quantidadeimpar);
+	printf("Numeros par: %i\n",quantidadepar);
+	return 0;
+}
