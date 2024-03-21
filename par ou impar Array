@@ -8,6 +8,7 @@ int main (){
 	for(i=0;i<6;i++){
 		printf ("Digite o %iº numero ",i+1);
 		scanf("%i",&num[i]);
+		//num[i] %2 == 0 ? quantidadepar++ : quantidadeimpar ++; (ao inves do if, poderia se essa operaçao ternaria)
 		if (num[i] % 2 == 0 ){
 			quantidadepar++;
 		}
