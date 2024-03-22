@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main (){
+	
+	int i,num[6],quantidadepar=0,quantidadeimpar=0,possitivo=0,negativo=0;
+	
+	for (i=0;i<6;i++){
+		
+		printf("Digite o %iº numero: ",i+1);
+		scanf("%i",&num[i]);
+		if (num[i] %2 == 0 && num[i] >0){
+			quantidadepar++;
+		}
+		if (num[i] %2 != 0 && num[i] > 0){
+			quantidadeimpar++;
+		}
+		if (num[i] > 0){
+			possitivo++;
+		}
+		if (num[i] < 0){
+			negativo++;
+		}
+	}
+	printf("\n Numero possitivo : %i ",possitivo);
+	printf("\n numero negativo : %i ",negativo);
+	printf("\n Numero par: %i ",quantidadepar);
+	printf("\n Numero impar: %i ",quantidadeimpar);
+	
+	return 0;
+	
+}
