@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+	void cabecalho(){
+		system ("clear || cls ");
+		printf("===RESULTADO FINAL====");
+		fflush (stdin);
+	}
+	
+    setlocale(LC_ALL, "");
+
+    char diciplina[3][200];
+    float nota[3][3],media;
+    int i, j,soma=0,peso[3][1],p;
+
+    for (i = 0; i < 3; i++) {
+        printf("\nDigite o nome da %dª diciplina: ",i+1);
+        scanf("%s",&diciplina[i]);
+		fflush(stdin);
+		
+        for (j = 0; j < 3; j++) {
+            printf("Digite a %iª nota: ", j + 1);
+            scanf("%f",&nota[i][j]);
+            fflush(stdin);
+			printf ("\nDigite o %i peso ",j+1);
+			scanf("%i",&peso[j]);
+			fflush(stdin);
+		} 
+        }
+    
+    
+    for (i=0;i<3;i++){ //exibindo dados
+		printf ("\n A %iº dicilpina: %s",i+1,diciplina[i]);
+	for (j=0;j<3;j++){
+		printf ("\n O %iº nota: %f tem o peso %i ",j+1,nota[i][j],peso[j]);
+	}
+	}
+	
+		
+return 0;
+
+}
