@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<locale.h>
+#include<stdlib.h>
+#include <limits.h>
+int main (){
+	void cabecalho() {
+	    system ("clear || cls");
+	}
+	setlocale (LC_ALL,"");
+	char nome[200],telefone[200],email[200]; 
+	int idade,opcao;
+	
+	printf ("Digite seu nome: ");
+	scanf("%s",&nome);
+	printf("\n idade: ");
+	scanf ("%i",&idade);
+	printf("\n Digite seu email: ");
+	scanf ("%s",&email);
+	printf("\n Digite seu telefone: ");
+	scanf("%s",&telefone);
+	cabecalho ();
+	do {
+	printf("1- Mostrar nome e idade \n");
+	printf("2- Mostrer nome e email \n");
+	printf("3- Mostrar nome e telefone \n");
+	printf("4- Mostrar todas as informações \n");
+	printf("0- Sair do programa \n");
+	printf("\n Opção ");
+	scanf ("%i",&opcao);
+	if (opcao < 0 || opcao > 5){
+		printf("\n Opção invalida\n");
+	}
+	}
+	while (opcao < 0 || opcao > 5);
+	cabecalho ();
+	
+	switch (opcao){
+		case 1 :
+			printf ("NOME E IDADE: %s , %i",nome,idade);
+			break;
+		case 2: 
+			printf ("NOME E EMAIL: %s , %s",nome,email);
+			break;
+		case 3: 
+			printf("NOME E TELEFONE: %s, %s",nome,telefone);
+			break;
+		case 4: 
+			printf ("NOME: %s \n",nome);
+			printf ("EMAIL: %s \n",email);
+			printf ("IDADE: %i \n",idade);
+			printf ("TELEFONE: %s \n",telefone);
+			break;
+		case 0:
+			break;
+	}
+	
+	return 0;
+}
